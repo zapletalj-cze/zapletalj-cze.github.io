@@ -1,0 +1,29 @@
+{
+"type": "FeatureCollection",
+"name": "cities",
+"features": [
+{ "type": "Feature", "properties": { "name": "Tirana", "population": 418495, "country": "Albania" }, "geometry": { "type": "Point", "coordinates": [ 19.8189, 41.3275 ] } },
+{ "type": "Feature", "properties": { "name": "Riga", "population": 632614, "country": "Latvia" }, "geometry": { "type": "Point", "coordinates": [ 24.1059, 56.946 ] } },
+{ "type": "Feature", "properties": { "name": "Vaduz", "population": 5000, "country": "Liechtenstein" }, "geometry": { "type": "Point", "coordinates": [ 9.5215, 47.1415 ] } },
+{ "type": "Feature", "properties": { "name": "Vienna", "population": 1907483, "country": "Austria" }, "geometry": { "type": "Point", "coordinates": [ 16.3738, 48.2082 ] } },
+{ "type": "Feature", "properties": { "name": "Vilnius", "population": 574221, "country": "Lithuania" }, "geometry": { "type": "Point", "coordinates": [ 25.2798, 54.6892 ] } },
+{ "type": "Feature", "properties": { "name": "Valletta", "population": 6000, "country": "Malta" }, "geometry": { "type": "Point", "coordinates": [ 14.5147, 35.8997 ] } },
+{ "type": "Feature", "properties": { "name": "Chisinau", "population": 532513, "country": "Moldova" }, "geometry": { "type": "Point", "coordinates": [ 28.8583, 47.0105 ] } },
+{ "type": "Feature", "properties": { "name": "Brussels", "population": 1770000, "country": "Belgium" }, "geometry": { "type": "Point", "coordinates": [ 4.3499, 50.8503 ] } },
+{ "type": "Feature", "properties": { "name": "Sarajevo", "population": 275524, "country": "Bosnia and Herzegovina" }, "geometry": { "type": "Point", "coordinates": [ 18.4065, 43.8486 ] } },
+{ "type": "Feature", "properties": { "name": "Monaco", "population": 38000, "country": "Monaco" }, "geometry": { "type": "Point", "coordinates": [ 7.4246, 43.7333 ] } },
+{ "type": "Feature", "properties": { "name": "Podgorica", "population": 185937, "country": "Montenegro" }, "geometry": { "type": "Point", "coordinates": [ 19.2641, 42.4411 ] } },
+{ "type": "Feature", "properties": { "name": "Sofia", "population": 1305383, "country": "Bulgaria" }, "geometry": { "type": "Point", "coordinates": [ 23.3219, 42.6977 ] } },
+{ "type": "Feature", "properties": { "name": "Zagreb", "population": 804200, "country": "Croatia" }, "geometry": { "type": "Point", "coordinates": [ 15.9893, 45.8131 ] } },
+{ "type": "Feature", "properties": { "name": "Amsterdam", "population": 872680, "country": "Netherlands" }, "geometry": { "type": "Point", "coordinates": [ 4.9041, 52.3676 ] } },
+{ "type": "Feature", "properties": { "name": "Oslo", "population": 634293, "country": "Norway" }, "geometry": { "type": "Point", "coordinates": [ 10.7461, 59.9127 ] } },
+{ "type": "Feature", "properties": { "name": "Nicosia", "population": 31600, "country": "Cyprus" }, "geometry": { "type": "Point", "coordinates": [ 33.366, 35.1376 ] } },
+{ "type": "Feature", "properties": { "name": "Prague", "population": 1300, "country": "Czech Republic" }, "geometry": { "type": "Point", "coordinates": [ 14.4208, 50.088 ] } },
+{ "type": "Feature", "properties": { "name": "Warsaw", "population": 1790658, "country": "Poland" }, "geometry": { "type": "Point", "coordinates": [ 21.0118, 52.2298 ] } },
+{ "type": "Feature", "properties": { "name": "Lisbon", "population": 506654, "country": "Portugal" }, "geometry": { "type": "Point", "coordinates": [ -9.1907, 38.7169 ] } },
+{ "type": "Feature", "properties": { "name": "Copenhagen", "population": 794128, "country": "Denmark" }, "geometry": { "type": "Point", "coordinates": [ 12.5711, 55.6761 ] } },
+{ "type": "Feature", "properties": { "name": "Helsinki", "population": 650000, "country": "Finland" }, "geometry": { "type": "Point", "coordinates": [ 24.9384, 60.1695 ] } },
+{ "type": "Feature", "properties": { "name": "Bucharest", "population": 1883425, "country": "Romania" }, "geometry": { "type": "Point", "coordinates": [ 26.1025, 44.4268 ] } },
+{ "type": "Feature", "properties": { "name": "Kyiv", "population": 2952000, "country": "Ukraine" }, "geometry": { "type": "Point", "coordinates": [ 30.523820232049349, 50.438526112117124 ] } }
+]
+}
