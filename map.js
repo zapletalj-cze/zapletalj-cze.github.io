@@ -1,7 +1,7 @@
 // JS for the map
 const map = L.map('map', { center: [50.08, 14.44], zoom: 6 });
 
-// Basemaps
+// BASEMAPS
 const CartoDB_DarkMatter = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
   subdomains: 'abcd',
@@ -26,6 +26,35 @@ const baseMaps = {
 
 // Select for basemaps
 L.control.layers(baseMaps).addTo(map);
+
+
+// CITIES
+//Icon styling
+
+
+function onEachFeature(feature, layer) {
+  layer.bindPopup(`
+    <strong>City:</strong> ${feature.properties.name}<br>
+    <strong>Country:</strong> ${feature.properties.country}<br>
+    <strong>Population:</strong> ${feature.properties.population}<br>
+  `);
+}
+const citiesGeojsonPath = 'data/cities.geojson'; 
+
+fetch(citiesGeojsonPath)
+  .then(response => response.json())
+  .then(data => {
+    L.geoJSON(data, {
+      pointToLayer: function (feature, latlng) {
+        return L.marker(latlng); 
+      },
+      onEachFeature: onEachFeature 
+    }).addTo(map);
+  })
+  .catch(error => {
+    console.error('Chyba při načítání GeoJSON souboru:', error);
+  });
+
 
 // STYLING AND POP-UPS
 let railwayLines = L.geoJSON(null, {
