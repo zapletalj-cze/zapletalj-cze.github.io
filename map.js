@@ -46,37 +46,6 @@ let railwayLines = L.geoJSON(null, {
   },
 }).addTo(map);
 
-// ADD CITIES TO MAP
-function onEachFeature(feature, layer) {
-  layer.bindPopup(`
-    <strong>City:</strong> ${feature.properties.name}<br>
-    <strong>Country:</strong> ${feature.properties.country}<br>
-    <strong>Population:</strong> ${feature.properties.population}<br>
-  `);
-}
-
-const citiesGeojsonPath = 'data/cities.geojson'; 
-fetch(citiesGeojsonPath)
-  .then(response => response.json())
-  .then(data => {
-    L.geoJSON(data, {
-      pointToLayer: function (feature, latlng) {
-        return L.marker(latlng, {
-          icon: L.icon({
-            iconUrl: 'path/to/icon.png', 
-            iconSize: [25, 25], 
-            iconAnchor: [12, 12],
-            popupAnchor: [0, -12], 
-          })
-        });
-      },
-      onEachFeature: onEachFeature 
-    }).addTo(map);
-  })
-  .catch(error => {
-    console.error('Chyba při načítání GeoJSON souboru:', error);
-  });
-
 
 // LOAD DATA - SAFE VERSION
 const geojsonPath = 'data/rail_data.geojson'; // Path to file
