@@ -1,1 +1,83 @@
-"Hello World" 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Night Trains in the EU</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-lasso@2.2.13/dist/leaflet-lasso.umd.min.js" />
+</head>
+<body>
+  <div id="map-container">
+    <div id="sidebar">
+      <h1 style="font-weight: bold; color: #fca311;">Night Trains in the EU</h1>
+      
+      <!-- Functional Sections -->
+      <div class="control-section">
+        <label for="search" style="font-weight: bold; color: #fca311;">Search by city or operator:</label>
+        <input type="text" id="search" placeholder="e.g., Prague or RegioJet">
+        <button id="search-btn" style="font-weight: bold; color: #000000;">Search</button>
+      </div>
+      <div class="control-section">
+        <button id="lasso-btn" style="font-weight: bold; color: #000000;">Select routes (lasso)</button>
+      </div>
+      <div class="control-section">
+        <label for="time-range" style="font-weight: bold; color: #fca311;">Filter by route duration (in hours):</label>
+        <input type="range" id="time-range" min="0" max="20" step="1">
+        <span id="time-range-label" style="font-weight: bold; color: #fca311;">0 - 20 h</span>
+      </div>
+      <div class="control-section">
+        <label for="operator-select" style="font-weight: bold; color: #fca311;">Filter by operator:</label>
+        <select id="operator-select" style="width: 100%; padding: 8px; background-color: #2c2c2c; color: #fca311; border-radius: 5px;">
+          <option value="">All operators</option>
+          <option value="České dráhy">České dráhy (Czechia)</option>
+          <option value="GWR">GWR (UK)</option>
+          <option value="Snalltaget">Snälltåget (Sweden)</option>
+          <option value="SNCF">SNCF (France)</option>
+          <option value="PKP Intercity">PKP Intercity (Poland)</option>
+          <option value="Trenitalia">Trenitalia (Italy)</option>
+          <option value="Ukrainian railway">Ukrainian railway (Ukraine)</option>
+          <option value="OBB">ÖBB (Austria)</option>
+          <option value="SJ">SJ (Sweden)</option>
+          <option value="MÁV">MÁV (Hungary)</option>
+          <option value="PKP">PKP (Poland)</option>
+        </select>
+      </div>
+
+      <!-- Information Section -->
+      <div class="info-section" style="margin-top: 30px; border-top: 2px solid #ccc; padding-top: 20px;">
+        <h2 style="font-weight: bold; color: #fca311;">For more information about night trains in Europe:</h2>
+        <ul>
+          <li><a href="https://rail.cc/night-train" target="_blank" style="font-weight: bold; color: #fca311;">Night trains in Europe on Rail.cc</a></li>
+          <li><a href="https://www.seat61.com/sleepers.htm" target="_blank" style="font-weight: bold; color: #fca311;">The Man in Seat 61 - Sleepers</a></li>
+        </ul>
+      </div>
+
+    </div>
+    <!-- Map -->
+    <div id="map"></div>
+  </div>
+
+  <!-- Table for displaying selected routes -->
+  <div id="selected-lines-table" class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Route</th>
+          <th>Operator</th>
+          <th>Price</th>
+          <th>Duration</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody id="selected-lines-tbody">
+      </tbody>
+    </table>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet-lasso@2.2.13/dist/leaflet-lasso.umd.min.js"></script>
+  <script src="map.js"></script>
+</body>
+</html>

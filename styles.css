@@ -1,0 +1,97 @@
+/* styles.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #121212; 
+  color: #fca311; 
+}
+
+#map-container {
+  display: flex;
+  height: 100vh;
+}
+
+#sidebar {
+  width: 300px;
+  background-color: #1a1a1a; 
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+}
+
+#sidebar h1 {
+  color: #fca311; 
+  text-align: center;
+}
+
+.control-section {
+  margin-bottom: 20px;
+}
+
+.control-section label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#search, #time-range {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  background-color: #2c2c2c;
+  color: #fca311;
+  border-radius: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #fca311;
+  color: #121212;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #ffb733;
+}
+
+#map {
+  flex: 1;
+  height: 100%;
+}
+
+/* Styling pro tabulku vybraných linek */
+#selected-lines-table table {
+  width: 100%;
+  border-collapse: separate;
+  margin-top: 20px;
+}
+
+#selected-lines-table th, #selected-lines-table td {
+  padding: 10px; /* Větší padding pro buňky */
+  text-align: left;
+  border: 1px solid #fca311; /* Okraje kolem buněk */
+}
+
+/* Zvětšení mezery mezi sloupci pomocí margin */
+#selected-lines-table td {
+  margin-right: 10px/* Zvětšení mezery mezi sloupci */
+}
+
+#selected-lines-table th {
+  background-color: #2c2c2c; /* Pozadí pro záhlaví tabulky */
+  color: #fca311;
+}
+
+#selected-lines-table td {
+  background-color: #1a1a1a; /* Pozadí pro buňky */
+  color: #fca311;
+}
+
+/* Styling pro hover efekt na řádcích tabulky */
+#selected-lines-table tr:hover {
+  background-color: #333333; /* Zvýraznění řádku při najetí myší */
+}
